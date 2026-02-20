@@ -1,52 +1,9 @@
-import Image from "next/image";
+import { noto_sans } from "./layout"
 
 export default function Home() {
 	return (
-		<div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-			<main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-				<Image className="dark:invert" src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
-				<ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-					<li className="mb-2 tracking-[-.01em]">
-						Get started by editing{" "}
-						<code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-							src/app/page.tsx
-						</code>
-						.
-					</li>
-					<li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-				</ol>
-
-				<div className="flex gap-4 items-center flex-col sm:flex-row">
-					<a
-						className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-						href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Read our docs
-					</a>
-				</div>
-			</main>
-			<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-					Learn
-				</a>
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-					Go to nextjs.org →
-				</a>
-			</footer>
-		</div>
-	);
+		<>
+			<p className={`text-xl ${noto_sans.className}`}>hai! :3 i'm xory, a silly little anglo-greek software engineer working on literally everything and anything. <wbr />my dream job is probably either in aerospace or fintech c: <wbr />the vast majority of my projects are <wbr />full-stack web, ai/ml and systems <wbr />and the languages i use the most are <wbr />python, javascript, <wbr />rust, c++ and go. aside from programming, <wbr />my other interests include aviation, obscure video games, <wbr />retro computers (amiga 500 ftw) and economics. <wbr />i've also worked with devops software like <wbr />docker and gitlab ci/cd on my neat little servers ^_^ <wbr />i currently daily drive nixos, <wbr />which is probably portfolio-worthy <wbr />because that's being deployed a lot recently (looking at you anduril). <wbr />finally, i've worked with security, hardened linux and related systems. <wbr />there are also some sub-sectors of software engineering i've always<wbr /> found satisfying but was never able to "break into"<wbr/> like offensive cybersec (thank matt trobianni for that special interest), osdev, low-level gpu programming and others.</p>
+		</>
+	)
 }
