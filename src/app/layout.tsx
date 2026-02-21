@@ -32,13 +32,13 @@ export default function RootLayout({
 			</head>
 			<body className={`antialiased bg-ctp-base text-ctp-text p-5`}>
 				<div className="flex justify-center items-center flex-col gap-4 text-center mb-4">
-					<h1 className={`text-6xl w-fill ${mrdafoe.className}`}>xory's website</h1>
+					<h1 className={`text-6xl w-fill ${mrdafoe.className} text-ctp-lavender`}>xory's website</h1>
 					<div className={`flex text-2xl w-full justify-evenly ${borel.className}`}>
-						<p>home</p>
-						<p>about</p>
-						<p>projects</p>
-						<p>contact</p>
-						<p>blog</p>
+						<p className="text-ctp-red">home</p>
+						<p className="text-ctp-yellow">about</p>
+						<p className="text-ctp-green">projects</p>
+						<p className="text-ctp-blue">contact</p>
+						<p className="text-ctp-mauve">blog</p>
 					</div>
 				</div>
 				{children}
