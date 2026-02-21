@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Mr_Dafoe, Borel, Noto_Sans } from "next/font/google";
+import Link from "next/link";
 
 export const mrdafoe = Mr_Dafoe({
 	weight: "400",
@@ -12,6 +13,11 @@ export const borel = Borel({
 })
 export const noto_sans = Noto_Sans({
 	weight: "300",
+	variable: "--font-noto-sans"
+})
+
+export const noto_sans_light = Noto_Sans({
+	weight: "100",
 	variable: "--font-noto-sans"
 })
 
@@ -34,11 +40,11 @@ export default function RootLayout({
 				<div className="flex justify-center items-center flex-col gap-4 text-center mb-4">
 					<h1 className={`text-6xl w-fill ${mrdafoe.className} text-ctp-lavender`}>xory's website</h1>
 					<div className={`flex text-2xl w-full justify-evenly ${borel.className}`}>
-						<p className="text-ctp-red">home</p>
-						<p className="text-ctp-yellow">about</p>
-						<p className="text-ctp-green">projects</p>
-						<p className="text-ctp-blue">contact</p>
-						<p className="text-ctp-mauve">blog</p>
+						<Link href="/" className="text-ctp-red">home</Link>
+						<Link href="/about" className="text-ctp-yellow">about</Link>
+						<Link href="/projects" className="text-ctp-green">projects</Link>
+						<Link href="/blog" className="text-ctp-mauve">blog</Link>
+						<Link href="/contact" className="text-ctp-blue">contact</Link>
 					</div>
 				</div>
 				{children}
