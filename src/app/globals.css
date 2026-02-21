@@ -1,8 +1,2 @@
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha.css";
-
-@theme {
-  --font-mrdafoe: var(--font-mrdafoe), ui-serif;
-	--font-borel: var(--font-borel), ui-sans-serif;
-	--font-noto-sans: var(--font-noto-sans), ui-sans-serif;
-}

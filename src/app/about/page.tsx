@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { noto_sans, noto_sans_light, borel } from "../layout"
+import { noto_sans, noto_sans_light, playwrite_gb } from "../layout"
 import { SiHono, SiNixos, SiFastapi, SiSvelte, SiNextdotjs, SiReact, SiDocker, SiProxmox, SiCloudflareworkers, SiC } from "react-icons/si";
 
 export default function About() {
 	return (
 		<>
-			<h1 className={`w-fill text-center text-6xl ${borel.className} pt-6`}>more about me</h1>
+			<h1 className={`w-fill text-center text-6xl ${playwrite_gb.className} py-2`}>more about me</h1>
 			<h1 className={`w-fill text-center text-ctp-surface2 text-2xl ${noto_sans_light.className}`}>or, a concise personal history from the beginning to the present and my hopes for the future</h1>
 			<hr className="border-2 my-3 text-ctp-surface0" />
 			<div className="flex items-center">
 				<div className={`bg-ctp-mantle p-6 rounded-xl mx-4 size-full ${noto_sans.className}`}>
-					<h3 className={`text-3xl ${borel.className}`}>history</h3>
+					<h3 className={`text-3xl ${noto_sans_light.className}`}>history</h3>
 					<p>so, i started out on an old clevo p150hmx my dad used to use. it was good enough for a first computer, since i didn't really do much on it. mostly just minecraft. however, it <i>was</i> my (albeit virtualised) first contact with linux. i used to spin up vms, install a linux distro, poke around a bit and then forget about it, mostly because i didn't really know what to do afterwards. even then, i'd argue it was the seed of this journey.</p>
 					<p className="pt-2">anyway, the desktop i got afterwards practically defined when i actually started developing. i learned python, built some basic api clients and started daily driving a windows-linux dualboot. i also learned javascript and after a long period of nothing, i learned rust and built a bunch of script-sized utilties. eventually, i upgraded it from a gtx 1050 to an rtx 3060 and began messing around with ai/ml, particularly diffusers and transformers. after finding some programmer friends online who motivated me to learn further, i started working with next.js, sveltekit and react to make actual modern websites.</p>
 					<p className="pt-2">recently, i ship of theseus'd it to a 5700x. at this point, i began to progress almost exponentially: i switched to nixos full-time, spun up a bunch of services via docker on a pi 4, made programs with actix/ntex, diesel and tokio, then i made my first actually practical rust applications, studied c++ and made my barebones redis clone (more c++ projects to come hopefully)</p>
@@ -19,7 +19,7 @@ export default function About() {
 				</div>
 				<div className="flex flex-col justify-evenly w-1/3 text-center">
 					<div className="bg-ctp-mantle p-6 rounded-xl my-2">
-						<h3 className={`text-3xl ${borel.className}`}>timeline</h3>
+						<h3 className={`text-3xl ${noto_sans_light.className}`}>timeline</h3>
 						<ul className={`${noto_sans.className}`}>
 							<li>first experience with linux in vms</li>
 							<li>basic python & javascript</li>
@@ -34,7 +34,7 @@ export default function About() {
 						</ul>
 					</div>
 					<div className="bg-ctp-mantle p-6 rounded-xl my-2">
-						<h3 className={`text-3xl ${borel.className}`}>tech stack</h3>
+						<h3 className={`text-3xl ${noto_sans_light.className}`}>tech stack</h3>
 						<div className="flex justify-center w-fill">
 							<div className="grid grid-cols-4 grid-rows-2 gap-6 text-center justify-center items-center p-2">
 								<SiNixos className="size-10 text-ctp-teal"/>
@@ -49,7 +49,7 @@ export default function About() {
 						</div>
 					</div>
 					<div className="bg-ctp-mantle p-6 rounded-xl my-2">
-						<Link href="/projects" className={`text-lg ${borel.className} text-ctp-rosewater`}>maybe now's the time to check out what i've made :3</Link>
+						<Link href="/projects" className={`text-lg ${playwrite_gb.className} text-ctp-rosewater`}>maybe now's the time to check out what i've made :3</Link>
 					</div>
 				</div>
 			</div>
