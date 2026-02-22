@@ -8,7 +8,7 @@ export default function About() {
 			<h1 className={`w-fill text-center text-6xl ${playwrite_gb.className} py-2`}>more about me</h1>
 			<h1 className={`w-fill text-center text-ctp-surface2 text-2xl ${noto_sans_light.className}`}>or, a concise personal history from the beginning to the present and my hopes for the future</h1>
 			<hr className="border-2 my-3 text-ctp-surface0" />
-			<div className="flex items-center">
+			<div className="flex lg:flex-row sm:flex-col items-center">
 				<div className={`bg-ctp-mantle p-6 rounded-xl mx-4 size-full ${noto_sans.className}`}>
 					<h3 className={`text-3xl ${noto_sans_light.className}`}>history</h3>
 					<p>so, i started out on an old clevo p150hmx my dad used to use. it was good enough for a first computer, since i didn't really do much on it. mostly just minecraft. however, it <i>was</i> my (albeit virtualised) first contact with linux. i used to spin up vms, install a linux distro, poke around a bit and then forget about it, mostly because i didn't really know what to do afterwards. even then, i'd argue it was the seed of this journey.</p>
@@ -17,7 +17,7 @@ export default function About() {
 					<p className="pt-2">less than a year ago, i got grade a on cambridge proficiency and my dad bought me my dream laptop as a reward: the framework laptop 16. to call it the luckiest purchase of my life would be an understatement: it has 32 gigabytes of ddr5 and i got it <i>mere months</i> before the rampocalypse. that aside, it's a genuine tank, i doubt i'll need another computer for ~10 years. since i had a laptop that was superiour to my 5700x desktop, i decided to turn said desktop into a homelab and run my own proxmox instance which runs all my infra: ollama, immich, searxng, samba, minecraft, lidarr, forgejo, you name it. now, i've started working with cloudflare workers, durable objects, d1 and all those cool little doohickeys ^_^. as of writing, i'm participating in hack club's 2026 flavour town event. i'm also scheming up a variant of my nixos installation that uses more of its capabilities: heavily hardened, local lms baked into the interface, automation all around, virtual machines everywhere and docker containers running synchronised copies of some of my homelab's services. it seems like a neat little project, we'll see how it goes.</p>
 					<p className="pt-2">the foreseeable future seems bright. my progress might as well be exponential. i'm finally on concerta! :D one of the programs i've made, anum, a forum made in the 90s' image, is going to receive some big updates or even a rewrite this spring or summer. i'm also working on getting my silly little hands on a 3d printer, so tomfoolery can reach critical levels! {'>'}:3 i've got plenty of ideas for what to do, as well: a discord clone, my own (small) LM (gunning for ducc's spot, hehe), my own budget smart home utilties, home-made drones (cyn will become real :3), fl16 mods (f.e. framelight), the list goes on and on!</p>
 				</div>
-				<div className="flex flex-col justify-evenly w-1/3 text-center">
+				<div className="flex flex-col justify-evenly lg:w-1/3 text-center">
 					<div className="bg-ctp-mantle p-6 rounded-xl my-2">
 						<h3 className={`text-3xl ${noto_sans_light.className}`}>timeline</h3>
 						<ul className={`${noto_sans.className}`}>
