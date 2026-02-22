@@ -49,7 +49,7 @@ export default function About() {
 						</div>
 					</div>
 					<div className="bg-ctp-mantle p-6 rounded-xl my-2">
-						<Link href="/projects" className={`text-lg ${playwrite_gb.className} text-ctp-rosewater`}>maybe now's the time to check out what i've made :3</Link>
+						<Link href="/projects" className={`text-lg ${playwrite_gb.className} text-ctp-rosewater`}>maybe after this you should check out what i've made :3</Link>
 					</div>
 				</div>
 			</div>
