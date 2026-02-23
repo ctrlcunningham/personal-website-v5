@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha.css";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-playwrite: var(--font-playwrite);
+}

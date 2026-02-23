@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { noto_sans, noto_sans_light, playwrite_gb } from "../layout"
+import { noto_sans, noto_sans_light, playwrite_gb } from "../../layout"
 
 interface Link {
   title: string;

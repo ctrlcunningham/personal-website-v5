@@ -1,4 +1,4 @@
-import { playwrite_gb, noto_sans, noto_sans_light } from "./layout"
+import { playwrite_gb, noto_sans, noto_sans_light } from "../layout"
 
 export default function Home() {
 	return (

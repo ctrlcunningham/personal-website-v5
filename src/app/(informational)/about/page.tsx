@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { noto_sans, noto_sans_light, playwrite_gb } from "../layout"
+import { noto_sans, noto_sans_light, playwrite_gb } from "../../layout"
 import { SiHono, SiNixos, SiFastapi, SiSvelte, SiNextdotjs, SiReact, SiDocker, SiProxmox, SiCloudflareworkers, SiC } from "react-icons/si";
 
 export default function About() {
