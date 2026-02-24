@@ -30,8 +30,8 @@ export default function Projects() {
     { "colour": "sapphire", "title": "valkyrie", "link": [{ "key": 0, "url": "https://github.com/xorydev/whitehole", "title": "git"}], "desc": "a local llm-based assistant for system management. as of writing, it is yet to be completed." },
     { "colour": "mauve", "title": "huginn", "link": [{ "key": 0, "url": "https://github.com/xorydev/whitehole", "title": "git"}], "desc": "a search engine that is directly interfaced with via discord." },
     { "colour": "red", "title": "this website!", "link": [{"key": 0, "url": "https://github.com/ctrlcunningham/personal-website-v5", "title": "git"}], "desc": "the website you are looking at right now :3"}
-  ]
-
+  ] // seriously considering having this be fetched from the db...
+  
   return (
     <>
       <h1 className={`w-fill text-center text-6xl ${playwrite_gb.className} py-2`}>projects</h1>

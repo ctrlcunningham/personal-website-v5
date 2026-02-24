@@ -5,9 +5,9 @@ import { SiHono, SiNixos, SiFastapi, SiSvelte, SiNextdotjs, SiReact, SiDocker, S
 export default function About() {
 	return (
 		<>
-			<h1 className={`w-fill text-center text-6xl ${playwrite_gb.className} py-2`}>more about me</h1>
-			<h1 className={`w-fill text-center text-ctp-surface2 text-2xl ${noto_sans_light.className}`}>or, a concise personal history from the beginning to the present and my hopes for the future</h1>
-			<hr className="border-2 my-3 text-ctp-surface0" />
+			<h1 className={`w-fill text-center text-3xl ${playwrite_gb.className}`}>more about me</h1>
+			<h1 className={`w-fill text-center text-ctp-surface2 text-xl ${noto_sans_light.className}`}>or, a concise personal history from the beginning to the present and my hopes for the future</h1>
+			<hr className="border-2 my-1 text-ctp-surface0" />
 			<div className="flex lg:flex-row sm:flex-col items-center">
 				<div className={`bg-ctp-mantle p-6 rounded-xl mx-4 size-full ${noto_sans.className}`}>
 					<h3 className={`text-3xl ${noto_sans_light.className}`}>history</h3>
@@ -36,7 +36,7 @@ export default function About() {
 					<div className="bg-ctp-mantle p-6 rounded-xl my-2">
 						<h3 className={`text-3xl ${noto_sans_light.className}`}>tech stack</h3>
 						<div className="flex justify-center w-fill">
-							<div className="grid grid-cols-4 grid-rows-2 gap-6 text-center justify-center items-center p-2">
+							<div className="grid grid-cols-4 grid-rows-2 gap-4 text-center justify-center items-center p-2">
 								<SiNixos className="size-10 text-ctp-teal"/>
 								<SiFastapi className="size-10 text-ctp-green"/>
 								<SiHono className="size-10 text-ctp-peach"/>

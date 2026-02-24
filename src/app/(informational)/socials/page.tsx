@@ -1,5 +1,5 @@
 import { playwrite_gb } from "@/app/layout"
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { SiDiscord, SiSignal, SiMatrix, SiGmail, SiGithub, SiForgejo } from "react-icons/si";
 import Link from "next/link";
 
@@ -10,21 +10,20 @@ interface SocialData {
   icon: ReactNode
 }
 
-function SocialCard(social_data: SocialData) {
+function SocialCard(props: SocialData) {
   return (
-    <div className="bg-ctp-crust p-10 m-2 w-fit text-center rounded-xl flex items-center gap-6">
-      {social_data.icon}
+    <div className="bg-ctp-mantle p-10 m-2 w-fit text-center rounded-xl flex items-center gap-6">
+      {props.icon}
       <div className="flex flex-col gap-2">
-        <h2 className={`text-4xl ${playwrite_gb.className}`}>{social_data.name}</h2>
-        <p className="text-xl">{social_data.account}</p>
+        <h2 className={`text-4xl ${playwrite_gb.className}`}>{props.name}</h2>
+        <p className="text-xl">{props.account}</p>
       </div>
     </div>
   )
 }
 
 export default function Socials() {
-
-  const socials: SocialData[] = [
+  const socials = [
     {
       "key": 0,
       "name": "discord",
@@ -61,18 +60,14 @@ export default function Socials() {
       "account": <Link href="https://git.xorydev.xyz/Xory">git.xorydev.xyz/Xory</Link>,
       "icon": <SiForgejo className="size-24" />
     },
-    
-    
-  ]
+  ] // seriously considering having this be fetched from the DB so i can dynamically update it from CF dashboard
 
   return (
     <>
       <h1 className={`text-4xl text-center ${playwrite_gb.className}`}>find me here :3</h1>
       <div className="flex w-fill justify-center mt-4">
-        <div className="grid grid-cols-2 grid-rows-2 w-fit justify-items-center gap-4">
-          {socials.map((social_data) =>
-              <SocialCard {...social_data} />
-          )}
+        <div className="flex flex-col items-center justify-items-center md:grid md:grid-cols-2 md:grid-rows-4 gap-4">
+          {socials.map(social => <SocialCard key={social.key} name={social.name} account={social.account} icon={social.icon} /> )}
         </div>
       </div>
     </>
