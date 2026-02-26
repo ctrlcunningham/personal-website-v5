@@ -12,7 +12,7 @@ interface SocialData {
 
 function SocialCard(props: SocialData) {
   return (
-    <div className="bg-ctp-mantle p-10 m-2 w-fit text-center rounded-xl flex items-center gap-6">
+    <div className="bg-ctp-mantle p-10 m-2 w-fit text-center rounded-xl flex items-center gap-6 hover:scale-125 transition ease-in-out duration-300 delay-25">
       {props.icon}
       <div className="flex flex-col gap-2">
         <h2 className={`text-4xl ${playwrite_gb.className}`}>{props.name}</h2>
@@ -28,37 +28,37 @@ export default function Socials() {
       "key": 0,
       "name": "discord",
       "account": "@xorydev",
-      "icon": <SiDiscord className="size-24 text-ctp-blue" />
+      "icon": <SiDiscord className="size-24 text-ctp-blue hover:text-ctp-pink hover:brightness-125 transition ease-in-out duration-300" />
     },
     {
       "key": 1,
       "name": "signal",
       "account": "xory.21",
-      "icon": <SiSignal className="size-24 text-ctp-sky" />
+      "icon": <SiSignal className="size-24 text-ctp-sky hover:text-ctp-pink hover:brightness-125 transition ease-in-out duration-300" />
     },
     {
       "key": 2,
       "name": "matrix",
       "account": "@xorydev:matrix.org",
-      "icon": <SiMatrix className="size-24 text-ctp-green" />
+      "icon": <SiMatrix className="size-24 text-ctp-green hover:text-ctp-pink hover:brightness-125 transition ease-in-out duration-300" />
     },
     {
       "key": 3,
       "name": "mail",
       "account": "xory@tutamail.com",
-      "icon": <SiGmail className="size-24 text-ctp-flamingo" />
+      "icon": <SiGmail className="size-24 text-ctp-flamingo hover:text-ctp-pink hover:brightness-125 transition ease-in-out duration-300" />
     },
     {
       "key": 4,
       "name": "github",
       "account": "@ctrlcunningham",
-      "icon": <SiGithub className="size-24" />
+      "icon": <SiGithub className="size-24 hover:text-ctp-pink hover:brightness-125 transition ease-in-out duration-300" />
     },
     {
       "key": 5,
       "name": "git server",
       "account": <Link href="https://git.xorydev.xyz/Xory">git.xorydev.xyz/Xory</Link>,
-      "icon": <SiForgejo className="size-24" />
+      "icon": <SiForgejo className="size-24 hover:text-ctp-pink hover:brightness-125 transition ease-in-out duration-300" />
     },
   ] // seriously considering having this be fetched from the DB so i can dynamically update it from CF dashboard
 

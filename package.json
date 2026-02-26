@@ -19,6 +19,7 @@
 		"@prisma/client-runtime-utils": "^7.4.1",
 		"isomorphic-dompurify": "^3.0.0",
 		"marked": "^17.0.3",
+		"motion": "^12.34.3",
 		"next": "16.1.5",
 		"react": "19.1.5",
 		"react-dom": "19.1.5",
