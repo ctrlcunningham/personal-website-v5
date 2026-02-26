@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Mr_Dafoe, Playwrite_GB_J, Noto_Sans } from "next/font/google";
-import Link from "next/link";
+import type { Viewport } from "next";
+
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1
+}
 
 export const mrdafoe = Mr_Dafoe({
 	weight: "400",

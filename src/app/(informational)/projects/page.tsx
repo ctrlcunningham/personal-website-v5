@@ -40,7 +40,7 @@ export default function Projects() {
               <h3 className={`text-2xl text-ctp-${project.colour} ${playwrite_gb.className}`}>{project.title}</h3>
               <div className="flex items-center">
                 {project.link.map((link) =>
-                  <Link key={link.key} href={link.url} className={`border-1 border-ctp-${project.colour} text-ctp-${project.colour} p-2 px-4 my-1 mx-[3px] rounded-lg hover:scale-115 transition ease-in-out duration-200`}>{link.title}</Link>
+                  <Link key={link.key} href={link.url} className={`border-1 border-ctp-${project.colour} text-ctp-${project.colour} p-2 px-4 my-1 mx-[3px] rounded-lg text-center hover:scale-115 transition ease-in-out duration-200`}>{link.title}</Link>
                 )}
               </div>
             </div>

@@ -8,9 +8,9 @@ export default function InformationLayout({
 }>) {
 	return (
 	  <body className={`antialiased bg-ctp-base text-ctp-text p-5`}>
-	  		<div className="flex justify-center items-center flex-col gap-4 text-center mb-4">
+	  		<div className="flex flex-col justify-center items-center gap-4 text-center mb-4">
 	  			<h1 className={`text-5xl w-fill ${mrdafoe.className} text-ctp-lavender`}>xory's website</h1>
-	  			<div className={`flex text-4xl w-full justify-evenly bg-ctp-mantle p-2 pb-4 rounded-2xl ${playwrite_gb.className}`}>
+	  			<div className={`flex flex-col lg:flex-row text-4xl w-full justify-evenly bg-ctp-mantle p-2 pb-4 rounded-2xl ${playwrite_gb.className}`}>
 	  				<Link href="/" className="text-ctp-red hover:scale-125 hover:brightness-125 transition-all ease-in-out duration-300 delay-50">home</Link>
 	  				<Link href="/about" className="text-ctp-yellow hover:scale-125 hover:brightness-125 transition-all ease-in-out duration-300 delay-50">about</Link>
 	  				<Link href="/projects" className="text-ctp-green hover:scale-125 hover:brightness-125 transition-all ease-in-out duration-300 delay-50">projects</Link>

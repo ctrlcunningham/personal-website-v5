@@ -21,7 +21,7 @@ export default async function Blog_PostList() {
               <h2 className={`text-3xl ${playwrite_gb.className}`}>{post.title}</h2>
               <p className="text-xs">{post.content.substring(0,100)}...</p>
             </div>
-            <p className="text-ctp-surface0">{post.createdAt.toISOString()}</p>
+            <p className="text-ctp-surface0 hidden lg:inline">{post.createdAt.toISOString()}</p>
           </Link>
         ))}
       </div>

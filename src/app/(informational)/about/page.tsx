@@ -8,7 +8,7 @@ export default function About() {
 			<h1 className={`w-fill text-center text-3xl ${playwrite_gb.className}`}>more about me</h1>
 			<h1 className={`w-fill text-center text-ctp-surface2 text-xl ${noto_sans_light.className}`}>or, a concise personal history from the beginning to the present and my hopes for the future</h1>
 			<hr className="border-2 my-1 text-ctp-surface0" />
-			<div className="flex lg:flex-row sm:flex-col items-center">
+			<div className="flex flex-col lg:flex-row items-center">
 				<div className={`bg-ctp-mantle p-6 rounded-xl mx-4 size-full ${noto_sans.className}`}>
 					<h3 className={`text-3xl ${noto_sans_light.className}`}>history</h3>
 					<p>so, i started out on an old clevo p150hmx my dad used to use. it was good enough for a first computer, since i didn't really do much on it. mostly just minecraft. however, it <i>was</i> my (albeit virtualised) first contact with linux. i used to spin up vms, install a linux distro, poke around a bit and then forget about it, mostly because i didn't really know what to do afterwards. even then, i'd argue it was the seed of this journey.</p>
