@@ -10,34 +10,41 @@
 		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
 		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
+		"trim-wasm": "find node_modules/.pnpm -name '*.wasm' -path '*/@vercel/og/*' -exec sh -c 'printf \"\\x00\\x61\\x73\\x6d\\x01\\x00\\x00\\x00\" > \"$1\"' _ {} \\;",
+		"deploy:cf": "opennextjs-cloudflare build && pnpm run trim-wasm && wrangler deploy --minify"
 	},
 	"dependencies": {
-		"@opennextjs/cloudflare": "^1.15.1",
-		"@prisma/adapter-d1": "^7.4.1",
-		"@prisma/client": "^7.4.1",
+		"@opennextjs/cloudflare": "^1.17.1",
 		"@prisma/client-runtime-utils": "^7.4.1",
-		"isomorphic-dompurify": "^3.0.0",
+		"drizzle-orm": "^0.45.1",
 		"marked": "^17.0.3",
-		"motion": "^12.34.3",
 		"next": "16.1.5",
 		"react": "19.1.5",
 		"react-dom": "19.1.5",
-		"react-icons": "^5.5.0"
+		"react-icons": "^5.5.0",
+		"sanitize-html": "^2.17.1"
 	},
 	"devDependencies": {
 		"@catppuccin/tailwindcss": "^1.0.0",
-		"@eslint/eslintrc": "^3",
-		"@tailwindcss/postcss": "^4",
+		"@cloudflare/workers-types": "^4.20260228.1",
+		"@eslint/eslintrc": "^3.3.4",
+		"@tailwindcss/postcss": "^4.2.1",
 		"@tailwindcss/typography": "^0.5.19",
-		"@types/node": "^20",
-		"@types/react": "^19.1.5",
-		"@types/react-dom": "^19.1.5",
-		"eslint": "^9",
+		"@types/node": "^20.19.35",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@types/sanitize-html": "^2.16.0",
+		"drizzle-kit": "^0.31.9",
+		"eslint": "^9.39.3",
 		"eslint-config-next": "15.4.6",
-		"prisma": "^7.4.1",
-		"tailwindcss": "^4",
-		"typescript": "^5.7.4",
-		"wrangler": "^4.67.0"
+		"tailwindcss": "^4.2.1",
+		"typescript": "^5.9.3",
+		"wrangler": "^4.69.0"
+	},
+	"pnpm": {
+		"overrides": {
+			"@vercel/og": "npm:empty-npm-package@1.0.0"
+		}
 	}
 }

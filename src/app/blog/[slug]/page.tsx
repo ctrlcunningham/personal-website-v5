@@ -1,8 +1,12 @@
+export const dynamic = "force-dynamic";
+
+import { eq } from "drizzle-orm"; 
+import { posts } from "@/db/schema";
 import { getDb } from "@/lib/db";
 import Link from "next/link";
 import { playwrite_gb, noto_sans, noto_sans_light } from "../../layout"
 import { marked } from 'marked';
-import DOMPurify from 'isomorphic-dompurify';
+import sanitizeHtml from 'sanitize-html';
 
 export default async function Blog_ViewPost({
   params,
@@ -16,18 +20,14 @@ export default async function Blog_ViewPost({
     return 400;
   }
 
-  const prisma = await getDb();
-  const post = await prisma.post.findUnique({
-    where: {
-      id: slug_num
-    }
-  })
-
+  const db = await getDb();
+  const allPosts = (await db.select().from(posts).where(eq(posts.id, slug_num)));
+  const post = allPosts[0];
   if (post === null) {
     return 404;
   }
 
-  const cleanHtml = DOMPurify.sanitize(await marked.parse(post.content));
+  const cleanHtml = sanitizeHtml(await marked.parse(post.content));
 
   return (
     <>
